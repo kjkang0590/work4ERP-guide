@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Web4ERP 주요 기능 - work4ERP 사용자 가이드</title>
+<style>
+:root{--bg:#f8fafc;--fg:#0f172a;--muted:#64748b;--card:#fff;--line:#e2e8f0;--accent:#e11d48}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1120;--fg:#e2e8f0;--muted:#94a3b8;--card:#111827;--line:#1f2937}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,"Malgun Gothic",sans-serif}
+main{max-width:960px;margin:0 auto;padding:32px 16px 64px}
+h1{margin:0 0 4px;font-size:28px}
+.meta{margin:0 0 32px;color:var(--muted);font-size:14px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin:0 0 20px;break-inside:avoid}
+.head{display:flex;gap:12px;align-items:flex-start}
+.head p{margin:0;padding-top:2px}
+.badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;line-height:28px;text-align:center}
+.step img{display:block;width:100%;height:auto;margin-top:16px;border:1px solid var(--line);border-radius:8px;cursor:zoom-in}
+.step img.zoom{position:fixed;inset:0;z-index:10;width:auto;max-width:96vw;max-height:96vh;margin:auto;background:var(--card);cursor:zoom-out;box-shadow:0 0 0 100vmax rgba(0,0,0,.7)}
+@media print{body{background:#fff;color:#000}.step{border-color:#ccc}.step img{cursor:auto}}
+
+.summary{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:8px 20px 12px;margin:0 0 20px}
+.summary h2,.summary h3,.summary h4{margin:14px 0 4px;font-size:16px}.summary p{margin:4px 0}.summary ul{margin:4px 0 6px;padding-left:20px}.summary li{margin:2px 0}
+.summary code{background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+.map{margin:0 0 32px}.map h2{margin:24px 0 8px;font-size:16px;color:var(--muted);text-transform:none}
+.map ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.map a{display:flex;justify-content:space-between;gap:8px;padding:10px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--fg);text-decoration:none}
+.map a:hover{border-color:var(--accent)}.map small{color:var(--muted);white-space:nowrap}
+.nav{display:flex;justify-content:space-between;gap:8px;margin:0 0 20px}
+.nav a{padding:8px 14px;background:var(--card);border:1px solid var(--line);border-radius:8px;color:var(--fg);text-decoration:none;font-size:14px}
+.nav a:hover{border-color:var(--accent)}.nav .sp{flex:1}.nav .mid{flex:none}
+.crumb{margin:0 0 8px;font-size:14px}.crumb a{color:var(--muted)}
+.page{display:none}.page.on{display:block}
+@media print{.nav,.crumb{display:none}.page{display:block;break-after:page}}
+</style>
+</head>
+<body>
+<main>
+<p class="crumb"><a href="index.html">work4ERP 사용자 가이드</a> › Web4ERP › 공통 기능</p><h1>Web4ERP 주요 기능</h1><p class="meta">33 / 68 · 27단계</p><section class="summary"><h3>주요 내용</h3>
+<ul>
+<li>Web4ERP 아래의 조회·등록 화면은 모두 같은 검색 상자와 그리드(표) 기능을 사용합니다. 이 페이지에서는 화면마다 반복해서 쓰는 공통 사용법을 한 번에 설명합니다.</li>
+<li>설명에는 '수주현황조회' 화면(조회용)과 '품목정보등록(Multi)' 화면(편집용)을 예로 사용합니다.</li>
+</ul>
+<h3>주의 사항</h3>
+<ul>
+<li>조회 기간을 넓게 잡으면 데이터가 많아 오래 걸릴 수 있습니다.</li>
+<li>검색·필터·그룹·정렬은 화면에 보이는 목록만 바꿉니다. ERP 데이터는 바뀌지 않습니다.</li>
+<li>편집 가능한 그리드에서 값을 채우거나 수정해도 '저장'하기 전에는 ERP에 반영되지 않습니다. 연습한 변경은 '취소'로 되돌리세요.</li>
+</ul>
+<h3>기능 요약</h3>
+<ul>
+<li><strong>검색</strong>: 검색란에 입력하고 잠시 기다리면 자동으로 조회되며, Enter를 누르면 바로 조회됩니다.</li>
+<li><strong>그룹</strong>: '+ 그룹 추가'에서 컬럼을 고르거나 머리글을 그룹 영역으로 끌어다 놓아 같은 값끼리 묶습니다. 전체 펼치기/접기, 그룹 해제(×)를 지원합니다.</li>
+<li><strong>필터</strong>: 컬럼 머리글 아래 입력란에서 컬럼별로 필터링합니다. 돋보기 버튼에서 포함·같음·시작/끝 문자·정규식·목록에 포함·공백 같은 조건을 고릅니다.</li>
+<li><strong>컬럼 헤더 팝업 메뉴</strong>: 정렬(오름/내림/해제), 왼쪽·오른쪽 고정, 컬럼 너비 자동 조정, 집계, 컬럼 선택(보이기·숨기기), 컬럼 초기화.</li>
+<li><strong>셀 선택 영역 요약</strong>: 숫자 셀을 끌어 범위를 선택하면 하단에 개수·합계·평균·최소·최대가 표시됩니다.</li>
+<li><strong>셀 드래그로 값 채우기</strong>: 편집 가능한 그리드에서 셀을 선택하고 오른쪽 아래 채우기 핸들을 끌면 값이 아래 행에 복사됩니다.</li>
+</ul></section><div class="nav"><a href="menu-32.html">← 축구 티켓 신청 관리</a><a class="mid" href="index.html">목차</a><a href="menu-34.html">Major코드조회 →</a></div><section class="step"><div class="head"><span class="badge">1</span><p>Web4ERP의 조회 화면은 모두 같은 검색 상자와 그리드 기능을 사용합니다. 여기서는 '수주현황조회' 화면으로 주요 기능을 설명합니다.</p></div><img src="images/261.png" alt="Web4ERP 주요 기능 1단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">2</span><p>먼저 조회 기간을 지정합니다.</p></div><img src="images/262.png" alt="Web4ERP 주요 기능 2단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">3</span><p>'조회'를 클릭해 데이터를 불러옵니다.</p></div><img src="images/263.png" alt="Web4ERP 주요 기능 3단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">4</span><p>조회 결과가 그리드에 표시됩니다.</p></div><img src="images/264.png" alt="Web4ERP 주요 기능 4단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">5</span><p>[검색] 검색란에 단어를 입력하고 잠시 기다리면 자동으로 조회됩니다. 모든 컬럼에서 일치하는 행을 찾습니다.</p></div><img src="images/265.png" alt="Web4ERP 주요 기능 5단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">6</span><p>기다리지 않고 바로 조회하려면 Enter 키를 누릅니다.</p></div><img src="images/266.png" alt="Web4ERP 주요 기능 6단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">7</span><p>검색어와 일치하는 행만 남고 전체 건수가 줄어듭니다.</p></div><img src="images/267.png" alt="Web4ERP 주요 기능 7단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">8</span><p>[그룹] '+ 그룹 추가'를 클릭하면 그룹 기준으로 쓸 컬럼 목록이 나타납니다.</p></div><img src="images/270.png" alt="Web4ERP 주요 기능 8단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">9</span><p>컬럼(예: 거래처명)을 선택하면 같은 값끼리 묶여 표시됩니다. 컬럼 머리글을 그룹 영역으로 끌어다 놓아도 되고, 그룹을 여러 개 추가해 단계별로 묶을 수도 있습니다.</p></div><img src="images/271.png" alt="Web4ERP 주요 기능 9단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">10</span><p>'전체 펼치기'/'전체 접기'로 모든 그룹을 한 번에 펼치거나 접습니다. 그룹 칩의 × 버튼으로 그룹을 해제합니다.</p></div><img src="images/272.png" alt="Web4ERP 주요 기능 10단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">11</span><p>'전체 펼치기'를 클릭하면 각 그룹 안의 행이 모두 표시됩니다.</p></div><img src="images/273.png" alt="Web4ERP 주요 기능 11단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">12</span><p>그룹 칩의 ×를 클릭해 그룹을 해제합니다.</p></div><img src="images/274.png" alt="Web4ERP 주요 기능 12단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">13</span><p>[필터] 컬럼 머리글 아래 입력란은 컬럼별 필터입니다. 왼쪽 돋보기 버튼으로 조건(포함·같음·시작/끝 문자·정규식·목록에 포함·공백 등)을 고릅니다.</p></div><img src="images/275.png" alt="Web4ERP 주요 기능 13단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">14</span><p>필터 값을 입력하면 해당 컬럼에서 조건에 맞는 행만 표시됩니다. 필터가 걸린 컬럼 머리글에는 깔때기 아이콘이 표시됩니다. 여러 컬럼에 동시에 필터를 걸 수 있습니다.</p></div><img src="images/277.png" alt="Web4ERP 주요 기능 14단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">15</span><p>필터 결과 건수가 표시됩니다.</p></div><img src="images/278.png" alt="Web4ERP 주요 기능 15단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">16</span><p>[컬럼 헤더 메뉴] 컬럼 머리글에 마우스를 올리면 나타나는 ☰ 버튼을 클릭하면 팝업 메뉴가 열립니다.</p></div><img src="images/282.png" alt="Web4ERP 주요 기능 16단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">17</span><p>팝업 메뉴에서 오름차순·내림차순 정렬, 왼쪽/오른쪽 고정, 컬럼 너비 자동 조정, 집계(개수·합계·평균 등), 컬럼 선택(보이기/숨기기), 컬럼 초기화를 할 수 있습니다.</p></div><img src="images/283.png" alt="Web4ERP 주요 기능 17단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">18</span><p>예를 들어 '내림차순 정렬'을 선택하면 수주금액이 큰 순서로 정렬됩니다.</p></div><img src="images/284.png" alt="Web4ERP 주요 기능 18단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">19</span><p>[셀 선택 영역 요약] 숫자 셀을 마우스로 끌어 범위를 선택합니다. Shift+클릭이나 Shift+방향키로도 범위를 넓힐 수 있습니다.</p></div><img src="images/285.png" alt="Web4ERP 주요 기능 19단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">20</span><p>그리드 아래쪽 요약 줄에 선택한 셀의 개수·합계·평균·최소·최대가 표시됩니다.</p></div><img src="images/286.png" alt="Web4ERP 주요 기능 20단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">21</span><p>[값 채우기] 값을 입력·수정할 수 있는 그리드(예: 품목정보등록(Multi))에서는 셀 값을 끌어서 아래 행에 채울 수 있습니다.</p></div><img src="images/289.png" alt="Web4ERP 주요 기능 21단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">22</span><p>'조회'를 클릭해 품목 목록을 불러옵니다.</p></div><img src="images/290.png" alt="Web4ERP 주요 기능 22단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">23</span><p>품목 목록이 표시됩니다.</p></div><img src="images/291.png" alt="Web4ERP 주요 기능 23단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">24</span><p>복사할 값이 있는 셀(예: 품목규격 '1')을 선택합니다. 선택한 셀의 오른쪽 아래 모서리에 작은 사각형(채우기 핸들)이 나타납니다.</p></div><img src="images/292.png" alt="Web4ERP 주요 기능 24단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">25</span><p>채우기 핸들을 아래로 끌어다 놓으면 값이 아래 셀들에 채워집니다. 숫자는 1씩 증가하며 채워지고(예: 1 → 2, 3, 4), 변경된 행에는 연필 아이콘과 '변경 N건'이 표시됩니다. 선택 영역 요약도 함께 표시됩니다.</p></div><img src="images/293.png" alt="Web4ERP 주요 기능 25단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">26</span><p>변경한 값은 '저장'해야 ERP에 반영됩니다. 연습한 내용은 '취소'로 되돌립니다.</p></div><img src="images/294.png" alt="Web4ERP 주요 기능 26단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">27</span><p>'취소'를 누르면 변경 내용이 사라지고 원래 값으로 돌아옵니다.</p></div><img src="images/295.png" alt="Web4ERP 주요 기능 27단계 화면" loading="lazy"></section><div class="nav"><a href="menu-32.html">← 축구 티켓 신청 관리</a><a class="mid" href="index.html">목차</a><a href="menu-34.html">Major코드조회 →</a></div>
+</main>
+<script>document.addEventListener("click",function(e){var t=e.target;if(t.tagName==="IMG")t.classList.toggle("zoom")});</script>
+</body>
+</html>

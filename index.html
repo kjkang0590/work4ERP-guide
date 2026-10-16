@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>work4ERP 사용자 가이드</title>
+<style>
+:root{--bg:#f8fafc;--fg:#0f172a;--muted:#64748b;--card:#fff;--line:#e2e8f0;--accent:#e11d48}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1120;--fg:#e2e8f0;--muted:#94a3b8;--card:#111827;--line:#1f2937}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,"Malgun Gothic",sans-serif}
+main{max-width:960px;margin:0 auto;padding:32px 16px 64px}
+h1{margin:0 0 4px;font-size:28px}
+.meta{margin:0 0 32px;color:var(--muted);font-size:14px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin:0 0 20px;break-inside:avoid}
+.head{display:flex;gap:12px;align-items:flex-start}
+.head p{margin:0;padding-top:2px}
+.badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;line-height:28px;text-align:center}
+.step img{display:block;width:100%;height:auto;margin-top:16px;border:1px solid var(--line);border-radius:8px;cursor:zoom-in}
+.step img.zoom{position:fixed;inset:0;z-index:10;width:auto;max-width:96vw;max-height:96vh;margin:auto;background:var(--card);cursor:zoom-out;box-shadow:0 0 0 100vmax rgba(0,0,0,.7)}
+@media print{body{background:#fff;color:#000}.step{border-color:#ccc}.step img{cursor:auto}}
+
+.summary{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:8px 20px 12px;margin:0 0 20px}
+.summary h2,.summary h3,.summary h4{margin:14px 0 4px;font-size:16px}.summary p{margin:4px 0}.summary ul{margin:4px 0 6px;padding-left:20px}.summary li{margin:2px 0}
+.summary code{background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+.map{margin:0 0 32px}.map h2{margin:24px 0 8px;font-size:16px;color:var(--muted);text-transform:none}
+.map ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.map a{display:flex;justify-content:space-between;gap:8px;padding:10px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--fg);text-decoration:none}
+.map a:hover{border-color:var(--accent)}.map small{color:var(--muted);white-space:nowrap}
+.nav{display:flex;justify-content:space-between;gap:8px;margin:0 0 20px}
+.nav a{padding:8px 14px;background:var(--card);border:1px solid var(--line);border-radius:8px;color:var(--fg);text-decoration:none;font-size:14px}
+.nav a:hover{border-color:var(--accent)}.nav .sp{flex:1}.nav .mid{flex:none}
+.crumb{margin:0 0 8px;font-size:14px}.crumb a{color:var(--muted)}
+.page{display:none}.page.on{display:block}
+@media print{.nav,.crumb{display:none}.page{display:block;break-after:page}}
+</style>
+</head>
+<body>
+<main>
+<h1>work4ERP 사용자 가이드</h1><p class="meta">2026-10-16 · 메뉴 68개 · 총 402단계</p><div class="map"><h2>시작</h2><ul><li><a href="menu-01.html"><span>로그인</span><small>7단계</small></a></li></ul>
+<h2>Management</h2><ul><li><a href="menu-02.html"><span>Home</span><small>1단계</small></a></li><li><a href="menu-03.html"><span>Users</span><small>21단계</small></a></li><li><a href="menu-04.html"><span>Roles</span><small>1단계</small></a></li><li><a href="menu-05.html"><span>Menus</span><small>4단계</small></a></li><li><a href="menu-06.html"><span>Content</span><small>1단계</small></a></li></ul>
+<h2>System</h2><ul><li><a href="menu-07.html"><span>오류 로그 관리</span><small>2단계</small></a></li><li><a href="menu-08.html"><span>Settings</span><small>5단계</small></a></li></ul>
+<h2>Config</h2><ul><li><a href="menu-09.html"><span>Session History</span><small>2단계</small></a></li></ul>
+<h2>대시보드</h2><ul><li><a href="menu-10.html"><span>Office Management 대시보드</span><small>2단계</small></a></li><li><a href="menu-11.html"><span>재고마감 대시보드</span><small>4단계</small></a></li><li><a href="menu-12.html"><span>재고마감 취소요청 이력</span><small>2단계</small></a></li><li><a href="menu-13.html"><span>영업 대시보드</span><small>3단계</small></a></li><li><a href="menu-14.html"><span>구매 대시보드</span><small>3단계</small></a></li></ul>
+<h2>Office Management</h2><ul><li><a href="menu-15.html"><span>사원증 발급 신청</span><small>5단계</small></a></li><li><a href="menu-16.html"><span>사원증 발급 신청 관리</span><small>12단계</small></a></li><li><a href="menu-17.html"><span>회의실 예약</span><small>11단계</small></a></li><li><a href="menu-18.html"><span>회의실예약현황조회(QR)</span><small>2단계</small></a></li><li><a href="menu-19.html"><span>근무복 신청</span><small>6단계</small></a></li><li><a href="menu-20.html"><span>근무복 신청 관리</span><small>12단계</small></a></li><li><a href="menu-21.html"><span>차량등록 신청</span><small>10단계</small></a></li><li><a href="menu-22.html"><span>차량등록 신청 관리</span><small>13단계</small></a></li><li><a href="menu-23.html"><span>외부 방문객 신청</span><small>9단계</small></a></li><li><a href="menu-24.html"><span>외부 방문객 신청 관리</span><small>12단계</small></a></li><li><a href="menu-25.html"><span>명함 신청</span><small>6단계</small></a></li><li><a href="menu-26.html"><span>명함 신청 관리</span><small>17단계</small></a></li><li><a href="menu-27.html"><span>사무소모품 신청</span><small>8단계</small></a></li><li><a href="menu-28.html"><span>사무소모품 신청 관리</span><small>11단계</small></a></li><li><a href="menu-29.html"><span>영선(비품수선) 신청 관리</span><small>17단계</small></a></li><li><a href="menu-30.html"><span>영선(비품수선) 신청</span><small>9단계</small></a></li><li><a href="menu-31.html"><span>축구 티켓 신청</span><small>4단계</small></a></li><li><a href="menu-32.html"><span>축구 티켓 신청 관리</span><small>5단계</small></a></li></ul>
+<h2>Web4ERP › 공통 기능</h2><ul><li><a href="menu-33.html"><span>Web4ERP 주요 기능</span><small>27단계</small></a></li></ul>
+<h2>Web4ERP › 기준정보 › 공통기준정보</h2><ul><li><a href="menu-34.html"><span>Major코드조회</span><small>3단계</small></a></li><li><a href="menu-35.html"><span>Major코드등록</span><small>5단계</small></a></li></ul>
+<h2>Web4ERP › 기준정보 › 품목기준정보</h2><ul><li><a href="menu-36.html"><span>품목정보등록</span><small>3단계</small></a></li><li><a href="menu-37.html"><span>품목정보등록(Multi)</span><small>5단계</small></a></li></ul>
+<h2>Web4ERP › 재고관리 › 수불정보</h2><ul><li><a href="menu-38.html"><span>수불장조회</span><small>7단계</small></a></li><li><a href="menu-39.html"><span>기간별수불현황조회</span><small>4단계</small></a></li></ul>
+<h2>Web4ERP › 재고관리 › 재고현황</h2><ul><li><a href="menu-40.html"><span>기간별재고현황</span><small>4단계</small></a></li></ul>
+<h2>Web4ERP › 영업관리 › 수주정보</h2><ul><li><a href="menu-41.html"><span>수주현황조회</span><small>4단계</small></a></li><li><a href="menu-42.html"><span>수주상세조회</span><small>4단계</small></a></li></ul>
+<h2>Web4ERP › 영업관리 › 출하정보</h2><ul><li><a href="menu-43.html"><span>출하요청상세조회</span><small>4단계</small></a></li><li><a href="menu-44.html"><span>출하현황조회</span><small>4단계</small></a></li><li><a href="menu-45.html"><span>출하상세조회</span><small>4단계</small></a></li><li><a href="menu-46.html"><span>미출고집계조회</span><small>4단계</small></a></li></ul>
+<h2>Web4ERP › 영업관리 › 매출채권정보</h2><ul><li><a href="menu-47.html"><span>매출채권현황조회</span><small>4단계</small></a></li><li><a href="menu-48.html"><span>매출채권상세조회</span><small>4단계</small></a></li><li><a href="menu-49.html"><span>미매출채권현황조회</span><small>4단계</small></a></li></ul>
+<h2>Web4ERP › 생산관리 › 제조오더정보</h2><ul><li><a href="menu-50.html"><span>제조오더현황조회</span><small>4단계</small></a></li><li><a href="menu-51.html"><span>생산입고현황조회</span><small>4단계</small></a></li><li><a href="menu-52.html"><span>공정별실적조회</span><small>4단계</small></a></li><li><a href="menu-53.html"><span>오더별실적조회</span><small>4단계</small></a></li></ul>
+<h2>Web4ERP › 구매관리 › 구매요청정보</h2><ul><li><a href="menu-54.html"><span>구매요청집계조회</span><small>4단계</small></a></li><li><a href="menu-55.html"><span>구매요청상세조회</span><small>4단계</small></a></li></ul>
+<h2>Web4ERP › 구매관리 › 발주정보</h2><ul><li><a href="menu-56.html"><span>발주집계조회</span><small>4단계</small></a></li><li><a href="menu-57.html"><span>발주상세조회</span><small>4단계</small></a></li><li><a href="menu-58.html"><span>수입진행현황조회</span><small>4단계</small></a></li></ul>
+<h2>Web4ERP › 구매관리 › 구매입출고정보</h2><ul><li><a href="menu-59.html"><span>입고집계조회</span><small>4단계</small></a></li><li><a href="menu-60.html"><span>입고상세조회</span><small>4단계</small></a></li><li><a href="menu-61.html"><span>미입고상세조회</span><small>4단계</small></a></li><li><a href="menu-62.html"><span>미입고통관상세조회</span><small>4단계</small></a></li></ul>
+<h2>Web4ERP › 구매관리 › 매입정보</h2><ul><li><a href="menu-63.html"><span>매입내역집계조회</span><small>4단계</small></a></li><li><a href="menu-64.html"><span>매입내역상세조회</span><small>4단계</small></a></li><li><a href="menu-65.html"><span>미매입입고상세조회</span><small>4단계</small></a></li></ul>
+<h2>Sign</h2><ul><li><a href="menu-66.html"><span>Sign01</span><small>10단계</small></a></li></ul>
+<h2>계정</h2><ul><li><a href="menu-67.html"><span>Profile</span><small>4단계</small></a></li><li><a href="menu-68.html"><span>로그아웃</span><small>3단계</small></a></li></ul></div>
+</main>
+<script>document.addEventListener("click",function(e){var t=e.target;if(t.tagName==="IMG")t.classList.toggle("zoom")});</script>
+</body>
+</html>

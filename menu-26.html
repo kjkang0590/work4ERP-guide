@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>명함 신청 관리 - work4ERP 사용자 가이드</title>
+<style>
+:root{--bg:#f8fafc;--fg:#0f172a;--muted:#64748b;--card:#fff;--line:#e2e8f0;--accent:#e11d48}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1120;--fg:#e2e8f0;--muted:#94a3b8;--card:#111827;--line:#1f2937}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,"Malgun Gothic",sans-serif}
+main{max-width:960px;margin:0 auto;padding:32px 16px 64px}
+h1{margin:0 0 4px;font-size:28px}
+.meta{margin:0 0 32px;color:var(--muted);font-size:14px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin:0 0 20px;break-inside:avoid}
+.head{display:flex;gap:12px;align-items:flex-start}
+.head p{margin:0;padding-top:2px}
+.badge{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;line-height:28px;text-align:center}
+.step img{display:block;width:100%;height:auto;margin-top:16px;border:1px solid var(--line);border-radius:8px;cursor:zoom-in}
+.step img.zoom{position:fixed;inset:0;z-index:10;width:auto;max-width:96vw;max-height:96vh;margin:auto;background:var(--card);cursor:zoom-out;box-shadow:0 0 0 100vmax rgba(0,0,0,.7)}
+@media print{body{background:#fff;color:#000}.step{border-color:#ccc}.step img{cursor:auto}}
+
+.summary{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:8px 20px 12px;margin:0 0 20px}
+.summary h2,.summary h3,.summary h4{margin:14px 0 4px;font-size:16px}.summary p{margin:4px 0}.summary ul{margin:4px 0 6px;padding-left:20px}.summary li{margin:2px 0}
+.summary code{background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+.map{margin:0 0 32px}.map h2{margin:24px 0 8px;font-size:16px;color:var(--muted);text-transform:none}
+.map ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.map a{display:flex;justify-content:space-between;gap:8px;padding:10px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--fg);text-decoration:none}
+.map a:hover{border-color:var(--accent)}.map small{color:var(--muted);white-space:nowrap}
+.nav{display:flex;justify-content:space-between;gap:8px;margin:0 0 20px}
+.nav a{padding:8px 14px;background:var(--card);border:1px solid var(--line);border-radius:8px;color:var(--fg);text-decoration:none;font-size:14px}
+.nav a:hover{border-color:var(--accent)}.nav .sp{flex:1}.nav .mid{flex:none}
+.crumb{margin:0 0 8px;font-size:14px}.crumb a{color:var(--muted)}
+.page{display:none}.page.on{display:block}
+@media print{.nav,.crumb{display:none}.page{display:block;break-after:page}}
+</style>
+</head>
+<body>
+<main>
+<p class="crumb"><a href="index.html">work4ERP 사용자 가이드</a> › Office Management</p><h1>명함 신청 관리</h1><p class="meta">26 / 68 · 17단계</p><section class="summary"><h3>주요 내용</h3>
+<ul>
+<li>명함 신청을 조회하고 승인·제작·제작완료·반려를 처리하는 관리자 화면입니다.</li>
+</ul>
+<h3>주의 사항</h3>
+<ul>
+<li>제작완료까지 처리해야 신청자가 다음 신청을 할 수 있습니다. 처리할 신청 건을 체크한 뒤 버튼을 누릅니다.</li>
+</ul>
+<h3>기능 요약</h3>
+<ul>
+<li>조회 조건: 신청 기간·진행상태·신청구분·부서·성명·사번.</li>
+<li>처리 버튼: 승인/제작중/제작완료/반려와 각 취소.</li>
+</ul></section><div class="nav"><a href="menu-25.html">← 명함 신청</a><a class="mid" href="index.html">목차</a><a href="menu-27.html">사무소모품 신청 →</a></div><section class="step"><div class="head"><span class="badge">1</span><p>'명함 신청 관리'을(를) 클릭합니다. 명함 신청 현황을 조회하고 승인·제작중·제작완료·반려를 처리하는 관리 화면입니다.</p></div><img src="images/179.png" alt="명함 신청 관리 1단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">2</span><p>조회 조건을 정한 뒤 '조회'를 클릭합니다.</p></div><img src="images/180.png" alt="명함 신청 관리 2단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">3</span><p>조회 결과가 목록에 표시됩니다.</p></div><img src="images/181.png" alt="명함 신청 관리 3단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">4</span><p>성명 등으로 조건을 좁혀 신청 건을 찾습니다.</p></div><img src="images/182.png" alt="명함 신청 관리 4단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">5</span><p>'조회'를 클릭해 조건에 맞는 신청 건만 표시합니다.</p></div></section>
+<section class="step"><div class="head"><span class="badge">6</span><p>처리할 신청 건의 체크박스를 선택합니다. 선택하면 처리 버튼이 활성화됩니다.</p></div><img src="images/184.png" alt="명함 신청 관리 6단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">7</span><p>'승인' 버튼을 클릭하면 선택한 신청 건의 상태가 변경됩니다.</p></div><img src="images/185.png" alt="명함 신청 관리 7단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">8</span><p>처리되면 완료 메시지(토스트)가 표시됩니다. 신청자에게는 알림이 전달됩니다.</p></div><img src="images/186.png" alt="명함 신청 관리 8단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">9</span><p>신청 건의 상태가 '승인'(으)로 바뀌었습니다.</p></div><img src="images/188.png" alt="명함 신청 관리 9단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">10</span><p>같은 신청 건을 다시 선택합니다.</p></div><img src="images/189.png" alt="명함 신청 관리 10단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">11</span><p>'제작중'을(를) 클릭해 다음 단계로 진행합니다.</p></div><img src="images/190.png" alt="명함 신청 관리 11단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">12</span><p>처리되면 완료 메시지(토스트)가 표시됩니다. 신청자에게는 알림이 전달됩니다.</p></div><img src="images/191.png" alt="명함 신청 관리 12단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">13</span><p>신청 건의 상태가 '제작중'(으)로 바뀌었습니다.</p></div><img src="images/193.png" alt="명함 신청 관리 13단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">14</span><p>같은 신청 건을 다시 선택합니다.</p></div><img src="images/194.png" alt="명함 신청 관리 14단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">15</span><p>'제작완료'을(를) 클릭해 다음 단계로 진행합니다.</p></div><img src="images/195.png" alt="명함 신청 관리 15단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">16</span><p>처리되면 완료 메시지(토스트)가 표시됩니다. 신청자에게는 알림이 전달됩니다.</p></div><img src="images/196.png" alt="명함 신청 관리 16단계 화면" loading="lazy"></section>
+<section class="step"><div class="head"><span class="badge">17</span><p>신청 건의 상태가 '제작완료'(으)로 바뀌었습니다.</p></div><img src="images/198.png" alt="명함 신청 관리 17단계 화면" loading="lazy"></section><div class="nav"><a href="menu-25.html">← 명함 신청</a><a class="mid" href="index.html">목차</a><a href="menu-27.html">사무소모품 신청 →</a></div>
+</main>
+<script>document.addEventListener("click",function(e){var t=e.target;if(t.tagName==="IMG")t.classList.toggle("zoom")});</script>
+</body>
+</html>
